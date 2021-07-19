@@ -43,4 +43,20 @@ var getuserdetails = function () {
         alert("Input valid month")
         return false;
     }
+    let CC = parseInt(Inputyear.slice(0, 2));
+    let YY = parseInt(Inputyear.slice(2, 4));
+    let MM = parseInt(Inputmonth)+2;
+    let DD = parseInt(Inputdate);
+    let Dayoftheweek = (((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+
+    let day = Math.round(Dayoftheweek);
+
+    if (Inputgender === "Male") {
+        akanName = malenames[day]
+        document.getElementById("output").innerHTML = "Your name is "+akanName;
+    }
+    else if (Inputgender === "Female") {
+        akanName = femalenames[day]
+        document.getElementById("output").innerHTML = "Your name is "+akanName;
+    }
 }
