@@ -14,3 +14,33 @@ function validateform() {
     } else {
         getuserdetails()   }
 }
+var getuserdetails = function () {
+    let Inputyear = document.getElementById("YearField").value;
+    let intyear = parseInt(Inputyear)
+
+    let Inputmonth = document.getElementById("MonthField").value;
+    let intmonth = parseInt(Inputmonth)
+
+    let Inputdate = document.getElementById("DateField").value;
+    let intdate = parseInt(Inputdate)
+
+    let Inputgender = document.getElementById("gender").value
+    let akanName;
+
+
+    if (intyear > 2021) {
+        console.log()
+        alert("Input valid year")
+        return false;
+    }
+    if (intdate <= 0 || intdate > 31) {
+        console.log()
+        alert("Input correct date")
+        return false;
+    }
+    if (intmonth <= 0 || intmonth > 12) {
+        console.log()
+        alert("Input valid month")
+        return false;
+    }
+}
