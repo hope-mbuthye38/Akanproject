@@ -3,9 +3,9 @@ let malenames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]
 let femalenames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama",]
 
 function validateform() {
-    let year = document.getElementById("YearField").value;
-    let month = document.getElementById("MonthField").value;
-    let day = document.getElementById("DateField").value;
+    let year = document.getElementById("myear").value;
+    let month = document.getElementById("mmonth").value;
+    let day = document.getElementById("mdate").value;
 
     if (year == "" || month == "" || day == "") {
         console.log()
@@ -15,13 +15,13 @@ function validateform() {
         getuserdetails()   }
 }
 var getuserdetails = function () {
-    let Inputyear = document.getElementById("YearField").value;
+    let Inputyear = document.getElementById("myear").value ;
     let intyear = parseInt(Inputyear)
 
-    let Inputmonth = document.getElementById("MonthField").value;
+    let Inputmonth = document.getElementById("mmonth").value;
     let intmonth = parseInt(Inputmonth)
 
-    let Inputdate = document.getElementById("DateField").value;
+    let Inputdate = document.getElementById("mdate").value;
     let intdate = parseInt(Inputdate)
 
     let Inputgender = document.getElementById("gender").value
